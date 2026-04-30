@@ -177,6 +177,23 @@ p {
   font-size: 0.92rem;
 }
 
+.hero-tags {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hero-tags span {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0b5f58;
+  background: #dcf5f0;
+  border: 1px solid #bee4dd;
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -277,6 +294,33 @@ p {
   padding: 22px;
 }
 
+.model-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.model-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.model-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: #f0faf8;
+  color: var(--primary);
+  border: 1px solid #cbe7e2;
+}
+
 .plan ul {
   margin: 8px 0 0;
   padding-left: 20px;
@@ -367,6 +411,45 @@ th {
   margin-bottom: 8px;
 }
 
+.apply-flow {
+  background: linear-gradient(180deg, #ffffff, #f3faf8);
+}
+
+.flow-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.flow-grid article {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.flow-grid span {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.inline-cta {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .faq-list {
   margin-top: 12px;
   display: grid;
@@ -420,6 +503,24 @@ th {
   background: #fff;
 }
 
+.floating-cta {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 30;
+  text-decoration: none;
+  background: #f59e0b;
+  color: #fff;
+  font-weight: 800;
+  padding: 12px 18px;
+  border-radius: 999px;
+  box-shadow: 0 10px 22px rgba(245, 158, 11, 0.35);
+}
+
+.floating-cta:hover {
+  transform: translateY(-1px);
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(18px);
@@ -435,7 +536,9 @@ th {
   .hero-grid,
   .card-grid.two,
   .card-grid.four,
-  .steps {
+  .steps,
+  .model-grid,
+  .flow-grid {
     grid-template-columns: 1fr;
   }
 
@@ -451,6 +554,13 @@ th {
 
   .btn {
     width: 100%;
+    text-align: center;
+  }
+
+  .floating-cta {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
     text-align: center;
   }
 }
